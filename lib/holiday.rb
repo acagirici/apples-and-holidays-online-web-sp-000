@@ -41,11 +41,14 @@ holiday_hash[:spring].each do |holiday, items|
   end
 end
 
-def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
-  # code here
-  # remember to return the updated hashl
-holiday_hash[season][holiday_name] = supply_array
-  holiday_hash
+def add_new_holiday_with_supplies(holiday_hash,   holiday_hash.each do |season, holiday|
+    puts season.to_s.capitalize! << ":"
+    holiday.each do |holiday, supplies|
+      supplies = supplies.join(", ")
+      holiday = holiday.to_s.split("_").map {|w| w.capitalize}.join(" ")<< ":"
+      puts "  " + holiday + " " + supplies
+    end
+  end
 end
 
 def all_winter_holiday_supplies(holiday_hash)
